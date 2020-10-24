@@ -7,6 +7,9 @@ var divisors = new Array();
 function check_number(x) {
   const myNumber = input.value;
 
+  if (myNumber < 1 || myNumber === "") {
+    alert("Please Enter A Positive Number");
+  } else {
   for (let i = 0; i < x; i++) {
     if (x % i == 0) {
       divisors.push(i);
@@ -24,6 +27,7 @@ function check_number(x) {
   } else {
     result.innerHTML = `${myNumber} is NOT a perfect number.`;
   }
+}
 }
 
 toCheck.addEventListener("click", () => {
